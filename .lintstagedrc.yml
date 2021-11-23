@@ -1,0 +1,32 @@
+# {
+#   'lint-staged': {
+#     '*': 'your-cmd'
+#   }
+# }
+# {
+#   'extends': './tsconfig.json',
+#   'include': [
+#     '*.ts',
+#     '.eslintrc.js',
+#     '.lintstagedrc.yaml'
+#   ],
+#   'exclude': [
+#     'node_modules',
+#     'dist'
+#   ],
+#   "lint-staged": {
+#     "*.ts": [
+#       "prettier --write --single-quote",
+#       "git add"
+#     ]
+#   },
+# }
+
+'*.{js,ts}':
+  - prettier --write
+  - eslint --fix
+  - git add
+'*.{json,md,yml}':
+  - prettier --write
+  - git add
+  

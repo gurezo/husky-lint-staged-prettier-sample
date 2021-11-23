@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "this is husky, lint-staged, prettier sample",
   "main": "index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gurezo/husky-lint-staged-prettier-sample.git"
@@ -25,5 +22,17 @@
     "lint-staged": "^12.1.2",
     "prettier": "^2.4.1",
     "typescript": "^4.2.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint index.ts",
+    "prepare": "husky install && rm -rf dist && npm run build",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write --single-quote",
+      "git add"
+    ]
   }
 }
