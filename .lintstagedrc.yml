@@ -1,6 +1,5 @@
 "*.ts":
   - prettier --write --single-quote
-  # - eslint --fix
   - git add
 "*.{md,yml}":
   - prettier --write
