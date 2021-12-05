@@ -1,6 +1,9 @@
 "*.ts":
+  # typescript
+  # prettier で、ダブルクオートからシングルクオートへ
   - prettier --write --single-quote
   - git add
 "*.{md,yml}":
+  # markdown, yaml
   - prettier --write
   - git add
