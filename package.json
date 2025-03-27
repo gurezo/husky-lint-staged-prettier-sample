@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/gurezo/husky-lint-staged-prettier-sample#readme",
   "devDependencies": {
-    "@types/node": "22.13.13",
+    "@types/node": "22.13.14",
     "@typescript-eslint/eslint-plugin": "8.28.0",
     "@typescript-eslint/parser": "8.28.0",
     "eslint": "8.57.1",
